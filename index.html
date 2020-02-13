@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Untitled</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<script src="node_modules/vega/build/vega.js"></script>
+<script src="node_modules/vega-lite/build/vega-lite.js"></script>
+<script src="node_modules/vega-embed/build/vega-embed.js"></script>
+<script>
+  // global vegaEmbed
+  const asciidoctorVega = (function () {
+    return {
+      render: function(spec) {
+        vegaEmbed(document.currentScript, spec, {actions: false})
+      }
+    }
+  }())
+</script>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<script>asciidoctorVega.render({
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "values": [
+      {"a": "A", "b": 28},
+      {"a": "B", "b": 55},
+      {"a": "C", "b": 43}
+    ]
+  },
+  "encoding": {
+    "y": {"field": "a", "type": "ordinal"},
+    "x": {"field": "b", "type": "quantitative"}
+  },
+  "layer": [{
+    "mark": "bar"
+  }, {
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "baseline": "middle",
+      "dx": 3
+    },
+    "encoding": {
+      "text": {"field": "b", "type": "quantitative"}
+    }
+  }]
+})</script>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-02-13 10:35:56 +0100
+</div>
+</div>
+</body>
+</html>
+

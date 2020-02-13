@@ -1,0 +1,33 @@
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+	"data": {
+		"values": [
+			{
+				"a": "A",
+				"b": 2.1
+			},
+			{
+				"a": "B",
+				"b": 1.2
+			},
+			{
+				"a": "C",
+				"b": 0.3
+			}
+		]
+	},
+	"mark": {
+		"type": "bar",
+		"tooltip": true
+	},
+	"encoding": {
+		"x": {
+			"field": "a",
+			"type": "ordinal"
+		},
+		"y": {
+			"field": "b",
+			"type": "quantitative"
+		}
+	}
+}

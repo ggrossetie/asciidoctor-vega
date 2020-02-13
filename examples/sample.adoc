@@ -1,0 +1,42 @@
+= Vega Test
+:hardbreaks:
+:last-update-label!:
+
+== Vega inline
+
+[vega]
+....
+{
+	"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+	"data": {
+		"values": [
+			{"a": "A", "b": 28},
+			{"a": "B", "b": 55},
+			{"a": "C", "b": 43}
+		]
+	},
+	"encoding": {
+		"y": {"field": "a", "type": "ordinal"},
+		"x": {"field": "b", "type": "quantitative"}
+	},
+	"layer": [{
+		"mark": "bar"
+	}, {
+		"mark": {
+			"type": "text",
+			"align": "left",
+			"baseline": "middle",
+			"dx": 3
+		},
+		"encoding": {
+			"text": {"field": "b", "type": "quantitative"}
+		}
+	}]
+}
+....
+
+== Vega block
+
+vega::ordinal.vl[]
+
+vega::temporal.vl[]
