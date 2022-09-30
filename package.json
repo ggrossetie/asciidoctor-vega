@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Mogztter/asciidoctor-vega#readme",
   "dependencies": {
-    "vega": "^5.17.3",
+    "vega": "^5.22.1",
     "vega-embed": "^6.2.2",
     "vega-lite": "^4.2.0"
   },
